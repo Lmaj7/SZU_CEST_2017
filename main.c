@@ -1,4 +1,5 @@
 #include"common.h"
+#include"./interr/interr.h"
 
 void main(){
     while(1);

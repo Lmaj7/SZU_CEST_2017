@@ -16,16 +16,20 @@
 sbit    P_LCD_BKL     = P3^0;
 
 //timers
-#define TIMER0L 0x00
-#define TIMER0H 0x00
-#define TIMER1L 0x00
-#define TIMER1H 0x00
+#define TIMER0L 0x9A
+#define TIMER0H 0xA9
+//set to 1ms
+#define TIMER1L 0x5C
+#define TIMER1H 0xF7
+//set to 100us
+
 
 /*
 =========================
 sfr
 =========================
 */
+sfr AUXR=0x8E;
 
 /*
 =========================
@@ -40,8 +44,6 @@ unsigned char int fanCounter;
    functions
 =========================
 */
-void lcdSendData(char x);
-void lcdSendCmd(char x);
-void lcdSendArr(char x[]);
+
     
 #endif
